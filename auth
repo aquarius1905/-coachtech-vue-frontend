@@ -1,0 +1,14 @@
+auth: {
+  strategies: {
+    'laravelJWT': {
+      provider: 'laravel/jwt',
+      url: 'http://localhost:8000',
+      token: {
+        maxAge: 60 * 60
+      },
+      refreshToken: {
+        maxAge: 20160 * 60
+      }
+    },
+  },
+},
