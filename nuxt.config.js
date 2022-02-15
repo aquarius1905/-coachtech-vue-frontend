@@ -52,5 +52,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  auth: {
+  strategies: {
+    'laravelJWT': {
+      provider: 'laravel/jwt',
+      url: 'http://localhost:8000',
+      token: {
+        maxAge: 60 * 60
+      },
+      refreshToken: {
+        maxAge: 20160 * 60
+      }
+    },
+  },
+},
 }
